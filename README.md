@@ -89,3 +89,26 @@ uvicorn app.main:app --reload
 ## Notas de planes
 - Plan `free`: máx. 3 análisis guardados.
 - Plan `premium`: sin límite.
+
+
+## Frontend React
+Se agregó un frontend completo en `frontend/` con:
+- Login y registro
+- Dashboard con formulario para subir CV y analizarlo
+- Vista de resultados y descarga de PDF optimizado
+- Ruteo con `react-router-dom`
+- Manejo de estado global de autenticación con Context API
+- Integración con backend en `/api/v1` (proxy en Vite a `http://localhost:8000`)
+
+### Ejecutar frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Rutas frontend:
+- `/login`
+- `/registro`
+- `/dashboard`
+- `/resultados/:analysisId`
